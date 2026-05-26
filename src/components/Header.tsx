@@ -33,7 +33,7 @@ export default function Header() {
           </div>
           <div className="flex flex-col">
             <span className="font-serif tracking-widest text-xl md:text-2xl font-semibold text-[#f9f6f0] leading-none">
-              L'ORO DI NAPOLI
+              MARACUJA BELLA VITA
             </span>
             <span className="text-[10px] md:text-[11px] uppercase tracking-[0.25em] text-gold-300 font-bold font-sans mt-1">
               PIZZERIA HAUTE COUTURE

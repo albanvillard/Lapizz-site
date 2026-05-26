@@ -15,8 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "L'Oro di Napoliii | Pizzeria Haute Couture",
-  description: "Découvrez une expérience culinaire d'exception au cœur de Paris. Pizzas gastronomiques napolitaines façonnées avec art.",
+  title: "Maracuja Bella Vita | Pizzeria Haute Couture",
+  description: "Découvrez une expérience culinaire d'exception au cœur de Lyon. Pizzas gastronomiques napolitaines façonnées avec art.",
 };
 
 export default function RootLayout({

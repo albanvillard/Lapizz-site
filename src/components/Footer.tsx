@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif tracking-widest text-lg font-bold bg-gradient-to-r from-terracotta-100 via-terracotta-400 to-terracotta-600 bg-clip-text text-transparent">
-                  L'ORO DI NAPOLI
+                  MARACUJA BELLA VITA
                 </span>
                 <span className="text-[9px] uppercase tracking-[0.25em] text-anthracite-400 -mt-1 font-sans">
                   Pizzeria Haute Couture
@@ -76,19 +76,19 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>18 Avenue des Champs-Élysées, 75008 Paris</span>
+                <span>14 Rue Royale, 69001 Lyon</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <svg className="w-4 h-4 text-terracotta-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+33140000000" className="hover:text-terracotta-500 transition-colors">+33 (0)1 40 00 00 00</a>
+                <a href="tel:+33478000000" className="hover:text-terracotta-500 transition-colors">+33 (0)4 78 00 00 00</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <svg className="w-4 h-4 text-terracotta-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:contact@lorodinapoli.fr" className="hover:text-terracotta-500 transition-colors">contact@lorodinapoli.fr</a>
+                <a href="mailto:contact@maracujabellavita.fr" className="hover:text-terracotta-500 transition-colors">contact@maracujabellavita.fr</a>
               </li>
             </ul>
           </div>
@@ -117,7 +117,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="border-t border-anthracite-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-anthracite-400 font-sans">
-          <span>&copy; {currentYear} L'Oro di Napoli. Tous droits réservés.</span>
+          <span>&copy; {currentYear} Maracuja Bella Vita. Tous droits réservés.</span>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <a href="#" className="hover:text-terracotta-500 transition-colors">Mentions Légales</a>
             <a href="#" className="hover:text-terracotta-500 transition-colors">RGPD & Confidentialité</a>
