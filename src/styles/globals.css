@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  /* Elegant terracotta red accent palette */
+  --color-terracotta-50: #fdf5f2;
+  --color-terracotta-100: #fbeae3;
+  --color-terracotta-200: #f7d2c6;
+  --color-terracotta-300: #f0ae9c;
+  --color-terracotta-400: #e37e64;
+  --color-terracotta-500: #d65a31;
+  --color-terracotta-600: #c2411f;
+  --color-terracotta-700: #a13217;
+  --color-terracotta-800: #812a17;
+  --color-terracotta-900: #6b2618;
+  --color-terracotta-950: #3b1009;
+
+  /* Luxurious Brushed Gold / Champagne */
+  --color-gold-50: #fdfaf2;
+  --color-gold-100: #faf1d7;
+  --color-gold-200: #f3dfae;
+  --color-gold-300: #eac57a;
+  --color-gold-400: #dfa84a; /* Or brossé */
+  --color-gold-500: #d49037;
+  --color-gold-600: #b57025;
+  --color-gold-700: #8f501b;
+  --color-gold-800: #693414;
+  --color-gold-900: #4a210d;
+
+  /* Deep premium anthracite / stone tones */
+  --color-anthracite-50: #f6f6f6;
+  --color-anthracite-100: #ececec;
+  --color-anthracite-200: #e3e3e3;
+  --color-anthracite-300: #c1c1c1;
+  --color-anthracite-400: #8e8e8e;
+  --color-anthracite-500: #555555;
+  --color-anthracite-600: #333333;
+  --color-anthracite-700: #222222;
+  --color-anthracite-800: #161616;
+  --color-anthracite-900: #0a0a0a;
+
+  /* Google Fonts mapped from next/font/google */
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+:root {
+  --background: #08080a;
+  --foreground: #f9f6f0; /* Creamy off-white */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* realistic Dark Slate Stone Texture class */
+.bg-slate-stone {
+  background-color: #08080a;
+  background-image: 
+    /* Slate surface lighting */
+    radial-gradient(circle at 50% 0%, rgba(45, 48, 56, 0.4) 0%, transparent 65%),
+    radial-gradient(circle at 0% 100%, rgba(20, 21, 26, 0.6) 0%, transparent 50%),
+    /* Fine stone cleavage lines */
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.003) 0px, rgba(255, 255, 255, 0.003) 1px, transparent 1px, transparent 15px),
+    repeating-linear-gradient(-35deg, rgba(0, 0, 0, 0.15) 0px, rgba(0, 0, 0, 0.15) 2px, transparent 2px, transparent 25px),
+    /* Mineral grain noise */
+    radial-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 0),
+    radial-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 0);
+  background-size: 100% 100%, 100% 100%, 120px 120px, 80px 80px, 8px 8px, 6px 6px;
+  background-repeat: no-repeat, no-repeat, repeat, repeat, repeat, repeat;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.95);
+}
+
+/* Custom premium scrollbar for Slate theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08080a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dfa84a; /* Brushed gold hover */
+}
+
+/* Luxury glassmorphism utilities for Dark Kitchen */
+.glass {
+  background: rgba(8, 8, 10, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(223, 168, 74, 0.18); /* Soft gold border */
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Hot glowing copper-orange neon animation classes */
+.neon-glow-orange {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.9))
+          drop-shadow(0 0 8px rgba(249, 115, 22, 0.8))
+          drop-shadow(0 0 20px rgba(234, 88, 12, 0.5))
+          drop-shadow(0 0 40px rgba(214, 90, 49, 0.3));
+}
+
+.neon-glow-subtle {
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5))
+          drop-shadow(0 0 4px rgba(249, 115, 22, 0.4))
+          drop-shadow(0 0 12px rgba(214, 90, 49, 0.2));
+}

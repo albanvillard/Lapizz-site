@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <!-- Soft neon glow blur filter -->
+    <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+    </filter>
+  </defs>
+
+  <!-- Section 1: Black structural metal backing frames (structural detail) -->
+  <circle cx="50" cy="50" r="45" stroke="#121316" stroke-width="2" />
+  <circle cx="50" cy="50" r="41" stroke="#181a20" stroke-width="1" />
+  <path d="M 50 5 L 50 95 M 5 50 L 95 50" stroke="#121316" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M 18 18 L 82 82 M 18 82 L 82 18" stroke="#0e0f12" stroke-width="1" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Section 2: Outer circular neon ring (Orange-red glowing tube) -->
+  <!-- 1. Blurred background glow -->
+  <circle cx="50" cy="50" r="41" stroke="#c2411f" stroke-width="4" filter="url(#neonBlur)" opacity="0.85" />
+  <!-- 2. Neon tube body -->
+  <circle cx="50" cy="50" r="41" stroke="#ff7f50" stroke-width="1.8" stroke-linecap="round" />
+  <!-- 3. Glowing core (gas glow) -->
+  <circle cx="50" cy="50" r="41" stroke="#ffeedd" stroke-width="0.6" opacity="0.95" />
+
+  <!-- Section 3: Pizza Slice / Crown (Copper-Orange Glowing Neon) -->
+  <!-- 1. Blurred background glow -->
+  <path d="M50 20 L72 65 C72 65 62 70 50 70 C38 70 28 65 28 65 L50 20 Z" stroke="#ea580c" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round" filter="url(#neonBlur)" opacity="0.8" />
+  <!-- 2. Neon tube body -->
+  <path d="M50 20 L72 65 C72 65 62 70 50 70 C38 70 28 65 28 65 L50 20 Z" stroke="#f97316" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
+  <!-- 3. Glowing core -->
+  <path d="M50 20 L72 65 C72 65 62 70 50 70 C38 70 28 65 28 65 L50 20 Z" stroke="#fff7ed" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round" opacity="0.95" />
+
+  <!-- Section 4: Slice Crust (Double-width neon arc) -->
+  <!-- 1. Blurred background glow -->
+  <path d="M29 63.5 C36 67.5 44 68.5 50 68.5 C56 68.5 64 67.5 71 63.5" stroke="#c2411f" stroke-width="6" stroke-linecap="round" filter="url(#neonBlur)" opacity="0.75" />
+  <!-- 2. Tube body -->
+  <path d="M29 63.5 C36 67.5 44 68.5 50 68.5 C56 68.5 64 67.5 71 63.5" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" />
+  <!-- 3. Core -->
+  <path d="M29 63.5 C36 67.5 44 68.5 50 68.5 C56 68.5 64 67.5 71 63.5" stroke="#ffedd5" stroke-width="0.8" stroke-linecap="round" opacity="0.95" />
+
+  <!-- Section 5: Pepperonis (Red Neon Tubes) -->
+  <!-- Pepperoni 1 (top center) -->
+  <circle cx="50" cy="38" r="3.5" stroke="#b91c1c" stroke-width="4.5" filter="url(#neonBlur)" opacity="0.8" />
+  <circle cx="50" cy="38" r="3.5" stroke="#ef4444" stroke-width="1.8" />
+  <circle cx="50" cy="38" r="3.5" stroke="#fee2e2" stroke-width="0.6" opacity="0.95" />
+
+  <!-- Pepperoni 2 (bottom left) -->
+  <circle cx="43" cy="50" r="3" stroke="#b91c1c" stroke-width="4" filter="url(#neonBlur)" opacity="0.8" />
+  <circle cx="43" cy="50" r="3" stroke="#ef4444" stroke-width="1.6" />
+  <circle cx="43" cy="50" r="3" stroke="#fee2e2" stroke-width="0.5" opacity="0.95" />
+
+  <!-- Pepperoni 3 (bottom right) -->
+  <circle cx="57" cy="50" r="3" stroke="#b91c1c" stroke-width="4" filter="url(#neonBlur)" opacity="0.8" />
+  <circle cx="57" cy="50" r="3" stroke="#ef4444" stroke-width="1.6" />
+  <circle cx="57" cy="50" r="3" stroke="#fee2e2" stroke-width="0.5" opacity="0.95" />
+
+  <!-- Section 6: Basil Leaves (Vibrant Green Neon Tubes) -->
+  <!-- Leaf 1 -->
+  <path d="M47 57.5 C44.5 55 45 52.5 48.5 54 C48.5 54 48 57.5 47 57.5 Z" stroke="#15803d" stroke-width="3.5" filter="url(#neonBlur)" opacity="0.75" />
+  <path d="M47 57.5 C44.5 55 45 52.5 48.5 54 C48.5 54 48 57.5 47 57.5 Z" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" />
+  <path d="M47 57.5 C44.5 55 45 52.5 48.5 54 C48.5 54 48 57.5 47 57.5 Z" stroke="#f0fdf4" stroke-width="0.4" stroke-linejoin="round" opacity="0.9" />
+
+  <!-- Leaf 2 -->
+  <path d="M53 57.5 C55.5 55 55 52.5 51.5 54 C51.5 54 52 57.5 53 57.5 Z" stroke="#15803d" stroke-width="3.5" filter="url(#neonBlur)" opacity="0.75" />
+  <path d="M53 57.5 C55.5 55 55 52.5 51.5 54 C51.5 54 52 57.5 53 57.5 Z" stroke="#22c55e" stroke-width="1.2" stroke-linejoin="round" />
+  <path d="M53 57.5 C55.5 55 55 52.5 51.5 54 C51.5 54 52 57.5 53 57.5 Z" stroke="#f0fdf4" stroke-width="0.4" stroke-linejoin="round" opacity="0.9" />
+</svg>
