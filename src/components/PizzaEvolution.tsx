@@ -24,12 +24,15 @@ export default function PizzaEvolution() {
     let loadedCount = 0;
     const tempImages: HTMLImageElement[] = [];
 
+    // ASTUCE : Chemin dynamique pour marcher en local ET sur GitHub Pages
+    const basePath = process.env.NODE_ENV === 'production' ? '/Lapizz-site' : '';
+
     for (let i = 1; i <= totalFrames; i++) {
       const img = new window.Image();
       const frameNum = String(i).padStart(5, "0");
 
-      // LIGNE CORRIGÉE : Ajout de /Lapizz-site devant le chemin de l'image
-      img.src = `/Lapizz-site/pizza_image_fin/${frameNum}.png`;
+      // On utilise le basePath ici
+      img.src = `${basePath}/pizza_image_fin/${frameNum}.png`;
 
       img.onload = () => {
         loadedCount++;
@@ -41,7 +44,7 @@ export default function PizzaEvolution() {
       };
 
       img.onerror = () => {
-        // Logically skip or fallback silently to prevent breaking the flow
+        // En cas d'erreur 404, on ignore silencieusement pour ne pas bloquer le chargement
         loadedCount++;
         setLoadProgress((loadedCount / totalFrames) * 100);
         if (loadedCount === totalFrames) {
@@ -71,7 +74,8 @@ export default function PizzaEvolution() {
     // Drawing helper
     const drawFrame = (frameIndex: number) => {
       const img = imagesRef.current[frameIndex];
-      if (img && ctx) {
+      // SÉCURITÉ ANTI-CRASH : On vérifie que l'image est bien chargée et non "broken"
+      if (img && ctx && img.complete && img.naturalWidth > 0) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
       }
@@ -79,9 +83,6 @@ export default function PizzaEvolution() {
 
     // Draw initial frame
     drawFrame(0);
-
-    // Scrub progression object
-    const animObject = { frame: 0 };
 
     // Pinning the section and scrubbing the frames
     const mainTrigger = ScrollTrigger.create({
