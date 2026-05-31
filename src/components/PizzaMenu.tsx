@@ -56,6 +56,9 @@ const PREMIUM_PIZZAS: Pizza[] = [
 ];
 
 export default function PizzaMenu() {
+  // Définition dynamique du chemin selon l'environnement (Local vs GitHub Pages)
+  const basePath = process.env.NODE_ENV === 'production' ? '/Lapizz-site' : '';
+
   return (
     <section id="menu" className="relative py-32 px-6 md:px-12 bg-[#08080a] border-t border-anthracite-800">
       {/* Subtle light accent */}
@@ -97,7 +100,8 @@ export default function PizzaMenu() {
                 )}
                 <div className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105">
                   <Image
-                    src={pizza.image}
+                    /* LIGNE CORRIGÉE : Injection dynamique du basePath */
+                    src={`${basePath}${pizza.image}`}
                     alt={pizza.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -111,7 +115,7 @@ export default function PizzaMenu() {
 
               {/* Text / Details (Generous spacing for premium feel) */}
               <div className="flex-1 p-8 flex flex-col justify-between space-y-8">
-                
+
                 {/* Title & Price */}
                 <div className="space-y-3">
                   <div className="flex justify-between items-baseline gap-4">
