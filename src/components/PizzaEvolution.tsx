@@ -13,7 +13,7 @@ export default function PizzaEvolution() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const textLeftRef = useRef<HTMLDivElement>(null);
   const textRightRef = useRef<HTMLDivElement>(null);
-  
+
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [loadProgress, setLoadProgress] = useState(0);
@@ -27,8 +27,10 @@ export default function PizzaEvolution() {
     for (let i = 1; i <= totalFrames; i++) {
       const img = new window.Image();
       const frameNum = String(i).padStart(5, "0");
-      img.src = `/pizza_image_fin/${frameNum}.png`;
-      
+
+      // LIGNE CORRIGÉE : Ajout de /Lapizz-site devant le chemin de l'image
+      img.src = `/Lapizz-site/pizza_image_fin/${frameNum}.png`;
+
       img.onload = () => {
         loadedCount++;
         setLoadProgress((loadedCount / totalFrames) * 100);
@@ -37,7 +39,7 @@ export default function PizzaEvolution() {
           setImagesLoaded(true);
         }
       };
-      
+
       img.onerror = () => {
         // Logically skip or fallback silently to prevent breaking the flow
         loadedCount++;
@@ -107,8 +109,8 @@ export default function PizzaEvolution() {
         scrub: true,
       }
     })
-    .fromTo(textLeftRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0 })
-    .to(textLeftRef.current, { opacity: 0, y: -40 });
+      .fromTo(textLeftRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0 })
+      .to(textLeftRef.current, { opacity: 0, y: -40 });
 
     // Right narrative block: Cuisson à 500°C
     const rightTrigger = gsap.timeline({
@@ -119,8 +121,8 @@ export default function PizzaEvolution() {
         scrub: true,
       }
     })
-    .fromTo(textRightRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0 })
-    .to(textRightRef.current, { opacity: 0, y: -40 });
+      .fromTo(textRightRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0 })
+      .to(textRightRef.current, { opacity: 0, y: -40 });
 
     return () => {
       mainTrigger.kill();
@@ -135,7 +137,7 @@ export default function PizzaEvolution() {
       <div className="relative h-screen w-full bg-[#08080a] flex flex-col items-center justify-center">
         {/* Subtle decorative glowing elements */}
         <div className="absolute w-[400px] h-[400px] bg-terracotta-900/10 rounded-full blur-[120px] pointer-events-none" />
-        
+
         <div className="space-y-6 text-center z-10">
           <span className="text-xs uppercase tracking-[0.3em] text-terracotta-500 font-bold font-sans block animate-pulse">
             Le Rituel Maracuja
@@ -143,14 +145,14 @@ export default function PizzaEvolution() {
           <h3 className="font-serif text-3xl md:text-4xl font-extrabold text-stone-100">
             Préparation de l'Évolution...
           </h3>
-          
+
           <div className="w-72 h-[2px] bg-stone-900 mx-auto relative overflow-hidden rounded-full">
-            <div 
-              className="absolute h-full bg-gradient-to-r from-terracotta-500 to-gold-400 transition-all duration-300 ease-out" 
+            <div
+              className="absolute h-full bg-gradient-to-r from-terracotta-500 to-gold-400 transition-all duration-300 ease-out"
               style={{ width: `${loadProgress}%` }}
             />
           </div>
-          
+
           <span className="text-[10px] uppercase tracking-[0.2em] text-stone-400 font-mono block">
             Chargement des frames : {Math.round(loadProgress)}%
           </span>
@@ -160,15 +162,15 @@ export default function PizzaEvolution() {
   }
 
   return (
-    <section 
-      ref={sectionRef} 
+    <section
+      ref={sectionRef}
       className="relative h-screen bg-transparent overflow-hidden select-none border-t border-b border-stone-900"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-terracotta-950/10 rounded-full blur-[150px] pointer-events-none" />
 
       {/* Narrative Block Left: Fermentation */}
-      <div 
+      <div
         ref={textLeftRef}
         className="absolute left-[5%] md:left-[8%] top-[30%] md:top-[38%] max-w-[280px] md:max-w-[340px] z-20 space-y-4 opacity-0 pointer-events-none"
       >
@@ -191,8 +193,8 @@ export default function PizzaEvolution() {
 
       {/* Canvas - full screen interactive background */}
       <div className="fixed inset-0 w-screen h-screen -z-20 pointer-events-none">
-        <canvas 
-          ref={canvasRef} 
+        <canvas
+          ref={canvasRef}
           className="w-full h-full object-cover opacity-60 filter brightness-[0.7] contrast-[1.05]"
         />
         {/* Vignette & premium ambient gradients */}
@@ -201,7 +203,7 @@ export default function PizzaEvolution() {
       </div>
 
       {/* Narrative Block Right: Cuisson */}
-      <div 
+      <div
         ref={textRightRef}
         className="absolute right-[5%] md:right-[8%] top-[35%] md:top-[42%] max-w-[280px] md:max-w-[340px] z-20 space-y-4 opacity-0 pointer-events-none text-right flex flex-col items-end"
       >
